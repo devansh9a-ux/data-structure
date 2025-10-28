@@ -1,0 +1,21 @@
+//wap in c for creating a node in c
+#include <stdio.h>
+#include <stdlib.h>
+struct Node {
+    int data;
+    struct Node* next;
+};
+int main() {
+struct Node* head = NULL;
+head = (struct Node*)malloc(sizeof(struct Node));
+ if (head == NULL) {
+ printf("Memory allocation failed.\n");
+ return 1;
+    }
+head->data = 10;
+head->next = NULL;
+printf("Node created successfully!\n");
+printf("Data = %d\n", head->data);
+free(head);
+return 0;
+}
